@@ -1,0 +1,26 @@
+<IfModule mod_charset.c>
+    CharsetDisable On
+</IfModule>
+
+AddDefaultCharset UTF-8
+
+php_value default_charset utf-8
+php_value memory_limit 128M
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} ^/css   [OR]
+    RewriteCond %{REQUEST_URI} ^/js    [OR]
+    RewriteCond %{REQUEST_URI} ^/fonts [OR]
+    RewriteCond %{REQUEST_URI} ^/upload [OR]
+    RewriteCond %{REQUEST_URI} ^/favicon.ico [OR]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^.*$ index.php [NC,L]
+</IfModule>
+
+DirectoryIndex index.html index.php

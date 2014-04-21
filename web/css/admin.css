@@ -1,0 +1,109 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 200;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 12px;
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+h1, h2, h3, h4 {
+    font-weight: 200;
+}
+
+.btn {
+    font-weight: 200;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+    border-bottom-width: 1px;
+}
+
+.has-error a {
+    color: #b94a48;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+    body {
+        padding-top: 130px;
+    }
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+        right: -50%;
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -50%;
+    }
+
+    .row-offcanvas-right.active {
+        right: 50%;
+    }
+
+    .row-offcanvas-left.active {
+        left: 50%;
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.form-actions {
+    padding: 20px 0px;
+    margin: 20px 0px;
+    border-top: 1px dashed #ccc;
+}
+
+@media (max-width: 980px) {
+    .navbar-text.pull-right {
+        float: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.required > label:before {
+    content: '*';
+    color: #b94a48;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.deleted {
+    color: #f89406;
+}
+
+.thumbnail {
+    margin-bottom: 20px;
+}
+
+/* table headers*/
+a.asc {
+    color: #f0ad4e;
+}
+a.desc {
+    color: #f0ad4e;
+}
