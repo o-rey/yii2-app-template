@@ -3,6 +3,9 @@
  * В этом файле размещаются настройки веб-приложения для конкретного хоста
  **/
 return [
+    'bootstrap' => [
+        'debug'
+    ],
     'modules' => [
         'debug' => [
             'class' => 'yii\debug\Module',
